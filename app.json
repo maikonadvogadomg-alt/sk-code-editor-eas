@@ -1,27 +1,44 @@
 {
-  "name": "assistente-juridico-apk",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo run:android",
-    "build:preview": "EAS_NO_VCS=1 eas build --platform android --profile preview --non-interactive",
-    "build:prod": "EAS_NO_VCS=1 eas build --platform android --profile production --non-interactive"
-  },
-  "dependencies": {
-    "expo": "~54.0.34",
-    "expo-status-bar": "~2.0.1",
-    "expo-splash-screen": "~0.29.22",
-    "expo-constants": "~17.0.8",
-    "react": "18.3.1",
-    "react-native": "0.76.9",
-    "react-native-webview": "13.12.5",
-    "@react-native-async-storage/async-storage": "2.1.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@types/react": "~18.3.11",
-    "typescript": "^5.3.3"
-  },
-  "private": true
+  "expo": {
+    "name": "Assistente Jurídico IA",
+    "slug": "assistente-juridico",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "assistentejuridico",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.maikoncaldeira.assistentejuridico"
+    },
+    "android": {
+      "package": "com.maikoncaldeira.assistentejuridico",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f172a"
+      },
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"
+      ],
+      "usesCleartextTraffic": true
+    },
+    "web": { "favicon": "./assets/favicon.png" },
+    "plugins": ["expo-splash-screen"],
+    "owner": "maikons-individual-orga2",
+    "extra": {
+      "eas": {
+        "projectId": "cdf4f804-8f80-4135-8a15-4b60a9f304b0"
+      }
+    }
+  }
 }
