@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "sk-code-editor",
+    "slug": "sk-code-editor",
+    "version": "1.0.0",
+    "owner": "maikons-individual-orga",
+    "orientation": "portrait",
+    "backgroundColor": "#0f172a",
+    "android": {
+      "package": "com.github.skcodeeditor",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0f172a"
+      }
+    },
+    "plugins": [
+      "./plugins/withCopyWww"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4ecb0863-1738-4d4e-b693-185e905fc234"
+      }
+    }
+  }
+}
